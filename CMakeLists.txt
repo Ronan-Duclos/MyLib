@@ -12,6 +12,6 @@ set(SRCS
 
 add_library(MyLib SHARED ${SRCS})
 
-target_include_directories(MyLib PRIVATE headers)
+target_include_directories(MyLib PRIVATE include)
 
 target_compile_definitions(MyLib PRIVATE MyLib::MyLib)
