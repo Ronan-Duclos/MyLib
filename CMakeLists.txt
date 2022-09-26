@@ -15,3 +15,15 @@ add_library(MyLib SHARED ${SRCS})
 target_include_directories(MyLib PRIVATE include)
 
 target_compile_definitions(MyLib PRIVATE MyLib::MyLib)
+
+file(COPY include
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+    FILES_MATCHING
+	PATTERN *.h
+	)
+
+file(COPY include
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+    FILES_MATCHING
+	PATTERN *.hpp
+	)
